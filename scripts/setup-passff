@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -sSL https://codeberg.org/PassFF/passff-host/releases/download/latest/install_host_app.sh | bash -s -- firefox
