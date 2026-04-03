@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# ~/.password-store/.git/hooks/post-commit
+# Push the current branch to the configured remote after each commit.
+
+set -e
+
+# Go to the repo root (in case hook is invoked from elsewhere)
+repo_root="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")"
+cd "$repo_root" || exit 1
+
+# Remote (default 'origin') and current branch
+remote=${PASS_GIT_REMOTE:-origin}
+branch="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+
+# If branch resolution failed, bail out
+if [ -z "$branch" ] || [ "$branch" = "HEAD" ]; then
+  echo "post-commit hook: can't determine current branch; skipping push" >&2
+  exit 0
+fi
+
+# If upstream is already set, do a normal push; otherwise set upstream once
+if git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
+  git push "$remote" "$branch"
+else
+  git push --set-upstream "$remote" "$branch"
+fi

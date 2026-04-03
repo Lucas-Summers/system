@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# SETUP SSH
+ssh-keygen -t ed25519 -C "lucas.summers.dev@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+echo "Paste key into GitHub --> Settings --> SSH and GPG Keys --> New key"
