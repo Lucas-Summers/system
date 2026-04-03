@@ -15,9 +15,6 @@
     shell = pkgs.fish;
   };
   system.primaryUser = "lucas";
-  networking.hostName = "m5";
-  networking.computerName = "m5";
-  system.defaults.smb.NetBIOSName = "m5";
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };

@@ -25,14 +25,24 @@
       ...
     }:
     {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#m5
       darwinConfigurations."m5" = nix-darwin.lib.darwinSystem {
         specialArgs = { inherit inputs; };
         modules = [
           inputs.home-manager.darwinModules.default
           inputs.agenix.darwinModules.default
-          ./modules/mac.nix
+          ./modules/m5.nix
+          ./modules/nix.nix
+          ./modules/user.nix
+          ./modules/wm.nix
+          ./modules/brew.nix
+        ];
+      };
+      darwinConfigurations."m1" = nix-darwin.lib.darwinSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          inputs.home-manager.darwinModules.default
+          inputs.agenix.darwinModules.default
+          ./modules/m1.nix
           ./modules/nix.nix
           ./modules/user.nix
           ./modules/wm.nix

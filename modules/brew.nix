@@ -27,7 +27,7 @@
 
     # `brew tap ...`
     taps = [
-      "manaflow-ai/cmux"
+      #"manaflow-ai/cmux"
     ];
 
     # `brew install ...`

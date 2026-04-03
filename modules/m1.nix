@@ -8,6 +8,8 @@
 
 {
   security.pam.services.sudo_local.touchIdAuth = true;
+  networking.hostName = "m1";
+  networking.computerName = "m1";
   system = {
     # Used for backwards compatibility, please read the changelog before changing.
     # $ darwin-rebuild changelog
@@ -16,6 +18,7 @@
     configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
 
     defaults = {
+      smb.NetBIOSName = "m1";
       # menuExtraClock.Show24Hour = true;  # show 24 hour clock
 
       # customize dock
