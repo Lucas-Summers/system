@@ -20,7 +20,10 @@
   };
   # The platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  };
   environment.systemPackages = with pkgs; [
     vim
   ];

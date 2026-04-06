@@ -13,8 +13,8 @@
   home.sessionVariables = {
     EDITOR = "zeditor";
     VISUAL = "zeditor";
-    BROWSER = "firefox";
-    TERMINAL = "cmux";
+    BROWSER = "zen";
+    TERMINAL = "ghostty";
     PAGER = "less";
   };
   # Let Home Manager install and manage itself.
@@ -24,6 +24,13 @@
     inputs.agenix.packages.${stdenv.hostPlatform.system}.default
     nixd
     nil
+    python3
+    python3Packages.pip
+    python3Packages.virtualenv
+    python3Packages.jupyterlab
+    nodejs
+    go
+    javaPackages.compiler.openjdk17
   ];
 
   home.file = {

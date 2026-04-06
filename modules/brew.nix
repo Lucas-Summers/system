@@ -38,6 +38,7 @@
       "opencode"
       "ripgrep"
       "docker"
+      "fzf"
     ];
 
     # `brew install --cask ...`
@@ -48,6 +49,9 @@
       "slack"
       "zed"
       "zen"
+      "obsidian"
+      "android-commandlinetools"
+      "android-platform-tools"
     ];
   };
 }
