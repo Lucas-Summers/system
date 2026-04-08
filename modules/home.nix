@@ -11,11 +11,12 @@
   home.homeDirectory = "/Users/lucas";
   home.stateVersion = "25.11";
   home.sessionVariables = {
-    EDITOR = "zeditor";
-    VISUAL = "zeditor";
+    EDITOR = "vim";
+    VISUAL = "zed";
     BROWSER = "zen";
     TERMINAL = "ghostty";
     PAGER = "less";
+    HOMEBREW_NO_ENV_HINTS = 1;
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

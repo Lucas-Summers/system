@@ -50,6 +50,8 @@
       "zed"
       "zen"
       "obsidian"
+      "codex"
+      "ungoogled-chromium"
       "android-commandlinetools"
       "android-platform-tools"
     ];
