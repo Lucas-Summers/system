@@ -27,7 +27,8 @@
 
     # `brew tap ...`
     taps = [
-      #"manaflow-ai/cmux"
+      "manaflow-ai/cmux"
+      "human37/open-wispr"
     ];
 
     # `brew install ...`
@@ -41,6 +42,7 @@
       "pi-coding-agent"
       "fd"
       "googleworkspace-cli"
+      "human37/open-wispr/open-wispr"
     ];
 
     # `brew install --cask ...`
