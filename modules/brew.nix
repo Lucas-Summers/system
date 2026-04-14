@@ -35,10 +35,12 @@
       "pass"
       "git"
       "pandoc"
-      "opencode"
       "ripgrep"
       "docker"
       "fzf"
+      "pi-coding-agent"
+      "fd"
+      "googleworkspace-cli"
     ];
 
     # `brew install --cask ...`
@@ -54,6 +56,8 @@
       "ungoogled-chromium"
       "android-commandlinetools"
       "android-platform-tools"
+      "gcloud-cli"
+      "cmux"
     ];
   };
 }

@@ -29,6 +29,7 @@
 
     interactiveShellInit = ''
       set -g fish_greeting
+      bind \cz 'fg 2>/dev/null; commandline -f repaint'
       /opt/homebrew/bin/brew shellenv | source
     '';
   };

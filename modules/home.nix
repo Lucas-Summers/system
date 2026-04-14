@@ -11,7 +11,7 @@
   home.homeDirectory = "/Users/lucas";
   home.stateVersion = "25.11";
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "hx";
     VISUAL = "zed";
     BROWSER = "zen";
     TERMINAL = "ghostty";
@@ -23,8 +23,6 @@
 
   home.packages = with pkgs; [
     inputs.agenix.packages.${stdenv.hostPlatform.system}.default
-    nixd
-    nil
     python3
     python3Packages.pip
     python3Packages.virtualenv
@@ -41,5 +39,6 @@
   imports = [
     ./shell.nix
     ./pass.nix
+    ./edit.nix
   ];
 }
