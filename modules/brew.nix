@@ -43,6 +43,7 @@
       "fd"
       "googleworkspace-cli"
       "human37/open-wispr/open-wispr"
+      "syncthing"
     ];
 
     # `brew install --cask ...`
