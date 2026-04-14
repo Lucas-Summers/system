@@ -34,6 +34,10 @@
 
   home.file = {
     #  ".config/zed/settings.json".source = ../../configs/zed/settings.json;
+    ".config/ghostty/config.ghostty".text = ''
+      font-family = "Iosevka Nerd Font Mono"
+      font-size = 14
+    '';
   };
 
   imports = [
