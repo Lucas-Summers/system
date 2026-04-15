@@ -61,7 +61,6 @@
       "android-platform-tools"
       "gcloud-cli"
       "cmux"
-      "syncthing-app"
     ];
   };
 }
