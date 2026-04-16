@@ -41,7 +41,6 @@
       "fzf"
       "pi-coding-agent"
       "fd"
-      "googleworkspace-cli"
       "human37/open-wispr/open-wispr"
       "syncthing"
     ];
@@ -54,13 +53,10 @@
       "slack"
       "zed"
       "zen"
-      "obsidian"
       "codex"
       "ungoogled-chromium"
-      "android-commandlinetools"
-      "android-platform-tools"
-      "gcloud-cli"
       "cmux"
+      "logseq"
     ];
   };
 }

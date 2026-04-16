@@ -29,7 +29,6 @@
     python3Packages.jupyterlab
     nodejs
     go
-    javaPackages.compiler.openjdk17
   ];
 
   home.file = {
